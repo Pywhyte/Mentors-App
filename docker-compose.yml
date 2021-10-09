@@ -4,8 +4,8 @@ services:
     container_name: django_back
     build:
       context: .
-      dockerfile: ./mentors_site/Dockerfile
+      dockerfile: ./back_end/Dockerfile
     ports:
       - 80:80
     volumes:
-      - ./back-end:/mentors-back
+      - ./back_end:/mentors-back
