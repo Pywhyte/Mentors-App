@@ -7,7 +7,16 @@ services:
       dockerfile: ./back_end/Dockerfile
     env_file:
       - .env
+    volumes:
+      - ./back_end:/mentors-back
+  nginx:
+    container_name: nginx_back
+    build:
+      context: .
+      dockerfile: ./back_end/nginx/Dockerfile
     ports:
       - 80:80
     volumes:
-      - ./back_end:/mentors-back
+      - ./back_end/static:/staticfiles
+    depends_on:
+      - django_back

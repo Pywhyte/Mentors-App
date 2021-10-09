@@ -6,4 +6,4 @@ CMD python manage.py migrate && \
     python manage.py createsuperuser --noinput \
     --username $DJANGO_SUPERUSER_USERNAME \
     --email $DJANGO_SUPERUSER_EMAIL | \
-    gunicorn mentors_site.wsgi:application --bind 0.0.0.0:80
+    gunicorn mentors_site.wsgi:application --bind 0.0.0.0:8000
