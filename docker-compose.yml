@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  django_back:
+    container_name: django_back
+    build:
+      context: .
+      dockerfile: ./mentors_site/Dockerfile
+    ports:
+      - 80:80
+    volumes:
+      - ./back-end:/mentors-back
