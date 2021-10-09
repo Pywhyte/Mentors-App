@@ -2,7 +2,8 @@ FROM python:3.9-slim
 WORKDIR /mentors-back
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-CMD python manage.py migrate && \
+CMD python manage.py makemigrations && \
+    python manage.py migrate && \
     python manage.py createsuperuser --noinput \
     --username $DJANGO_SUPERUSER_USERNAME \
     --email $DJANGO_SUPERUSER_EMAIL | \
