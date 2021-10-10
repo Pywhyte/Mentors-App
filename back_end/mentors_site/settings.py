@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "mentor_selection.apps.MentorSelectionConfig",
     "rest_framework",
-    "django_truncate",
+
 ]
 
 MIDDLEWARE = [
