@@ -14,7 +14,7 @@ from django.utils.translation import ugettext_lazy as _
 
 """
 class CustomUserChangeForm(UserChangeForm):
-    
+
     password = ReadOnlyPasswordHashField(
         label=_("Password"),
         help_text=_("Raw passwords are not stored, so there is no way to see "
