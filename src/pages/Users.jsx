@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import PostList from '../components/UserList';
 import UserFilter from '../components/UserFilter';
 import logo from "../Images/header__logo.svg"
@@ -17,7 +17,7 @@ const Users = () => {
     const [limit, setLimit] = useState(10)
     const [page, setPage] = useState(1)
 
-    const lastElement = useRef()
+    
 
 
 
@@ -32,12 +32,12 @@ const Users = () => {
 
     useEffect(() => {
         fetchPosts(limit, page)
-    }, [])
+    }, [limit, page])
 
 
     return (
         <div className="App">
-            <div className="links">
+             <div className="links">
                 <a className="click" href="/myprofile">MyProfile</a>
                 <a  className="click" href="/">Quit</a>
             </div>

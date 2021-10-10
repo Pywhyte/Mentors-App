@@ -12,12 +12,12 @@ const UserItem = (props) => {
     return (
         <div className="user">
             <div  className="user__navbar">
-            <img className="user__avatar" src={props.post.avatar_url} width="90" height="90"/>
+            <img className="user__avatar" src={props.post.avatar_url} alt="logo" width="90" height="90"/>
             </div>
             <div className="user__content">
-                <strong className="item__1"> {props.post.first_name}</strong>
+                <strong className="item__1"> {props.post.name}</strong>
                 <div  className="item__1">
-                    {props.post.main_skill}
+                    {props.post.company.name}
                 </div>
                 <div  className="item__1">{props.post.post.skill_level}</div>
                 <div  className="item__1">{props.post.organization_id.company_name}</div>

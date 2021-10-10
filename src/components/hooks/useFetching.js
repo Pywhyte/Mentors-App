@@ -7,14 +7,14 @@ export const useFetching = (callback) => {
 
     const fetching = async (...args) => {
         try {
-            setIsLoading(true)
+            
             await callback(...args)
         }
         catch (e) {
             setError(e.massage)
         }
         finally {
-            setIsLoading(false)
+            
         }
     }
     return [fetching, isLoading, error]
