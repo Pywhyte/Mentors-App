@@ -29,20 +29,21 @@ class User(models.Model):
     def __str__(self) -> str:
         return f"{self.last_name} {self.first_name}"
 
-    def become_mentor(self, main_skill, skill_level):
-        return Mentor(user_id=self, main_skill=main_skill, skill_level=skill_level)
+    # def become_mentor(self, main_skill, skill_level):
+    #   return Mentor(user_id=self, main_skill=main_skill, skill_level=skill_level)
 
 
 class Student(User):
     stud_id = models.AutoField(primary_key=True)
     # user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    pass
 
 
 SKILLS_CHOICES = (
-    ("JAVA_SCRIPT", "JAVA"),
-    ("DATA_SCIENCE", "data_science"),
+    ("JAVA_SCRIPT", "java script"),
+    ("DATA_SCIENCE", "data science"),
     ("PYTHON", "python"),
-    ("AUTOMATIC_TESTING", "automatic_testing"),
+    ("AUTOMATIC_TESTING", "automatic testing"),
 )
 
 
@@ -65,7 +66,7 @@ class Mentor(User):
 
 
 class Request(User):
-    request_id = models.AutoField(primary_key=True)
+    # request_id = models.AutoField(primary_key=True)
     student_id = models.ForeignKey(Student, on_delete=models.CASCADE)
     mentor_id = models.ForeignKey(Mentor, on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)
