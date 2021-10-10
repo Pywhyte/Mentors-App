@@ -1,0 +1,6 @@
+.avatar{
+    position:absolute;
+    display: flex;
+    border-radius: 50%;
+    top: 50px;
+}

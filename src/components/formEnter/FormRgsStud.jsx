@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import MyButton from '../button/MyButton';
 import MyInput from '../Input/MyInput';
 import "../../pages/Login.css"
 import classes from "./Form.module.css"
+import {registration} from "../../action/user"
 
 const FormRgsStud = ({ visible, setVisible }) => {
+
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+
     const rootClasses=[classes.box__rgss]
 
     if(visible){
@@ -12,13 +17,13 @@ const FormRgsStud = ({ visible, setVisible }) => {
     }
     return (
         <div className={rootClasses.join(" ")}>
-        <MyInput type="name" placeholder="Имя..."/>
+        <MyInput  value={email} setValue={setEmail} type="text" placeholder="Введите Email" />
         <MyInput type="email"placeholder="Email..."/>
         <MyInput type="text"placeholder="Company..."/>
-        <MyInput type="password"placeholder="Password..."/>
-        
-        
-        <MyButton >Войти</MyButton>
+        <MyInput value ={password} setValue={setPassword} type="password" placeholder="Введите пароль...."/>       
+        <MyButton onClick={()=>{
+                registration(email, password)
+            }}>Войти</MyButton>
     </div>
     );
 };

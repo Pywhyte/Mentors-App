@@ -1,0 +1,120 @@
+.bkgBox {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(252.71deg, #38FCF3 0%, #35C9F2 99.62%);
+    display: flex;
+   
+    
+}
+
+.eclipse {
+    position: absolute;
+    width: 592.07px;
+    height: 683.58px;
+    left: 903.93px;
+    top: 150.42px;
+    background: linear-gradient(180deg, #5F38FC 71.35%, #000000 100%);
+    filter: blur(400px);
+   
+}
+.eclipse2{
+    position: absolute;
+width: 592.07px;
+height: 683.58px;
+left: 287.96px;
+top: -8.12px;
+
+background: linear-gradient(180deg, #5F38FC 71.96%, #000000 100.6%);
+filter: blur(200px);
+}
+.eclipse3{
+    position: absolute;
+    width: 266.77px;
+    height: 266.77px;
+    left: 305.5px;
+    top: 51.07px;
+    
+    background: linear-gradient(106.82deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.12) 99.52%);
+    backdrop-filter: blur(100px);
+    /* Note: backdrop-filter has minimal browser support */
+    border: white solid 1px;
+    border-radius: 50%;
+    transform: rotate(99.07deg);
+}
+.eclipse4{
+    position: absolute;
+width: 250.84px;
+height: 250.84px;
+left: 1442.93px;
+top: 602.04px;
+border: white solid 1px;
+background: linear-gradient(106.82deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.12) 99.52%);
+backdrop-filter: blur(100px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 50%;
+transform: rotate(-142.28deg);
+}
+.profile__box{
+    position: absolute;
+width: 1080px;
+height: 600px;
+left: 450px;
+top: 200px;
+border: rgba(115, 205, 225, 0.467) solid 1px;
+border-radius: 30px;
+background: rgba(255, 255, 255, 0.111);
+}
+.eclipse5{
+    position: absolute;
+    width: 592.07px;
+    height: 683.58px;
+    left: 487.96px;
+    top: 50.12px;
+    background: linear-gradient(180deg, #5F38FC 71.96%, #000000 100.6%);
+    filter: blur(200px);
+}
+.profile__side{ 
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+    background: rgba(253, 253, 253, 0.22);
+    border-radius: 30px 0 0 30px;
+}
+.name,
+.surname{
+position: absolute;
+color: rgb(252, 252, 252);
+font-size: 34px;
+top: 180px;
+margin: 5px;
+}
+.name{
+    top: 140px;
+}
+.links{
+position: absolute;
+right: 50px;
+top: 15px;
+}
+.click {
+    cursor: pointer;
+    padding: 5px;
+    background: none;
+    color: rgb(255, 251, 251);
+    font-size: 25px;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+    margin: 10px;
+   font-size: 36px;
+    
+}
+
+.click:hover{
+    color: rgb(34, 225, 215);
+}
