@@ -1,9 +1,14 @@
-from django.http import HttpResponse
-from django.shortcuts import render
+from rest_framework import viewsets
+
+from .models import Mentor, Student
+from .serializers import StudentSerializer, MentorSerializer
 
 
-def index(request):
-    return HttpResponse("Страница приложения mentor_selection")
+class MentorViewSet(viewsets.ModelViewSet):
+    queryset = Mentor.objects.all().order_by('first_name')
+    serializer_class = MentorSerializer
 
 
-# Create your views here.
+class StudentViewSet(viewsets.ModelViewSet):
+    queryset = Student.objects.all().order_by('first_name')
+    serializer_class = StudentSerializer
