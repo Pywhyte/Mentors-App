@@ -1,8 +1,15 @@
-import React from 'react';
+import React,{useState} from 'react';
 import MyButton from '../button/MyButton';
 import MyInput from '../Input/MyInput';
 import classes from "./Form.module.css"
+import { useDispatch } from "react-redux"
+import {login} from "../../action/user"
 const FormEnter = ({ children, visible, setVisible }) => {
+
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const dispatch = useDispatch()
+
     const rootClasses=[classes.box_col]
 
     if(visible){
@@ -11,9 +18,10 @@ const FormEnter = ({ children, visible, setVisible }) => {
     return (
         <div className={rootClasses.join(" ")}>
             <div className="box">
-                <MyInput type="name" placeholder="Ваш логин..."/>          
-                <MyInput type="password"  placeholder="Ваш пароль..."/>
-                <MyButton>Войти</MyButton>
+                <MyInput value={email} setValue={setEmail} type="text" placeholder="Введите Email"/>          
+                <MyInput value={password} setValue={setPassword} type="password" placeholder="Введите пароль"/>
+                <MyButton onClick={() => dispatch(login(email, password))
+            }>Войти</MyButton>
             </div>
         </div>
     );

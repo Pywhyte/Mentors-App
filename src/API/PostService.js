@@ -6,26 +6,16 @@ export default class PostService {
 
         const response = await axios.get("")
         return response
-
-
     }
 
     static async getByID(id) {
 
-        const response = await axios.get("")
-        
+        const response = await axios.get("")        
         return response
-
-
     }
     static async getCommentsByPostId(id) {
 
-        const response = await axios.get(``)
-        
+        const response = await axios.get(``)        
         return response
-
-
     }
-
-
 }
