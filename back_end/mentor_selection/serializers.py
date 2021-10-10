@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Mentor, Organization, Student
+from .models import Mentor, Organization, Student, User
 
 
 class MentorSerializer(serializers.ModelSerializer):
@@ -21,3 +21,9 @@ class OrgSerializer(serializers.ModelSerializer):
     class Meta:
         model = Organization
         fields = "__all__"
+
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = '__all__'

@@ -17,3 +17,5 @@ class StudentViewSet(viewsets.ModelViewSet):
 class OrgViewSet(viewsets.ModelViewSet):
     queryset = Organization.objects.all().order_by("company_name")
     serializer_class = OrgSerializer
+
+
