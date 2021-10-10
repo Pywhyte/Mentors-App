@@ -17,8 +17,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
-from mentor_selection.views import *
 
-urlpatterns = [path("admin/", admin.site.urls), path("mentor/", index)] + static(
-    settings.STATIC_URL, document_root=settings.STATIC_ROOT
-)
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    path("", include("mentor_selection.urls")),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
