@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
-import { authContext } from '../../context/context';
+import React from 'react';
+
 import MyButton from '../button/MyButton';
 import MyInput from '../Input/MyInput';
 import classes from "./Form.module.css"
