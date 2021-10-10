@@ -3,6 +3,7 @@ from datetime import timedelta
 
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User, UserManager
 
 
 class DeadlineError(Exception):
@@ -16,15 +17,16 @@ class Organization(models.Model):
     contact_number = models.CharField(max_length=50)
 
 
-class User(models.Model):
+class CustomUser(User):
     us_id = models.AutoField(primary_key=True)
-    last_name = models.CharField(max_length=50)
-    first_name = models.CharField(max_length=50)
+    #last_name = models.CharField(max_length=50)
+    #first_name = models.CharField(max_length=50)
     organization_id = models.ForeignKey(
         Organization, on_delete=models.SET_NULL, null=True
     )
     e_mail = models.EmailField(max_length=254)
     phone_number = models.CharField(max_length=50)
+    objects = UserManager()
 
     def __str__(self) -> str:
         return f"{self.last_name} {self.first_name}"
@@ -33,7 +35,7 @@ class User(models.Model):
     #   return Mentor(user_id=self, main_skill=main_skill, skill_level=skill_level)
 
 
-class Student(User):
+class Student(CustomUser):
     stud_id = models.AutoField(primary_key=True)
     # user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     pass
@@ -54,7 +56,7 @@ SKILL_LEVEL = (
 )
 
 
-class Mentor(User):
+class Mentor(CustomUser):
     ment_id = models.AutoField(primary_key=True)
     # user_id = models.ForeignKey(User, on_delete=models.CASCADE)
 
@@ -65,7 +67,7 @@ class Mentor(User):
     skill_level = models.CharField(max_length=50, choices=SKILL_LEVEL, default="PYTHON")
 
 
-class Request(User):
+class Request(models.Model):
     # request_id = models.AutoField(primary_key=True)
     student_id = models.ForeignKey(Student, on_delete=models.CASCADE)
     mentor_id = models.ForeignKey(Mentor, on_delete=models.CASCADE)
