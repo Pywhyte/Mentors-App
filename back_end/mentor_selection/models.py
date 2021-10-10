@@ -10,14 +10,14 @@ class DeadlineError(Exception):
 
 
 class Organization(models.Model):
-    #org_id = models.AutoField(primary_key=True)
+    org_id = models.AutoField(primary_key=True)
     company_name = models.CharField(max_length=50)
     url = models.CharField(max_length=50)
     contact_number = models.CharField(max_length=50)
 
 
 class User(models.Model):
-    #us_id = models.AutoField(primary_key=True)
+    us_id = models.AutoField(primary_key=True)
     last_name = models.CharField(max_length=50)
     first_name = models.CharField(max_length=50)
     organization_id = models.ForeignKey(
@@ -29,14 +29,15 @@ class User(models.Model):
     def __str__(self) -> str:
         return f"{self.last_name} {self.first_name}"
 
-    #def become_mentor(self, main_skill, skill_level):
-     #   return Mentor(user_id=self, main_skill=main_skill, skill_level=skill_level)
+    # def become_mentor(self, main_skill, skill_level):
+    #   return Mentor(user_id=self, main_skill=main_skill, skill_level=skill_level)
 
 
 class Student(User):
-    #stud_id = models.AutoField(primary_key=True)
+    stud_id = models.AutoField(primary_key=True)
     # user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     pass
+
 
 SKILLS_CHOICES = (
     ("JAVA_SCRIPT", "java script"),
@@ -54,7 +55,7 @@ SKILL_LEVEL = (
 
 
 class Mentor(User):
-    #ment_id = models.AutoField(primary_key=True)
+    ment_id = models.AutoField(primary_key=True)
     # user_id = models.ForeignKey(User, on_delete=models.CASCADE)
 
     main_skill = models.CharField(
@@ -65,7 +66,7 @@ class Mentor(User):
 
 
 class Request(User):
-    #request_id = models.AutoField(primary_key=True)
+    # request_id = models.AutoField(primary_key=True)
     student_id = models.ForeignKey(Student, on_delete=models.CASCADE)
     mentor_id = models.ForeignKey(Mentor, on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)
