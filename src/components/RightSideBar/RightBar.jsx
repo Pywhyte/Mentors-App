@@ -5,8 +5,7 @@ import MyInput from '../Input/MyInput';
 import js from "../../Images/javascript.png"
 import react from "../../Images/react.png"
 import python from "../../Images/python.png"
-import MyButton from '../button/MyButton';
-import { Link } from 'react-router-dom';
+
 
 const CourseList = {
     course: [
@@ -21,7 +20,7 @@ const CourseList = {
 const Course = (props) => {
     return (
         <div className={cl.course}>
-            <img src={props.img} />
+            <img src={props.img} alt="sad"/>
             <div className={cl.prName}>{props.name}</div>
         </div>
     )

@@ -4,7 +4,7 @@ import "./Styles.css"
 
 
 
-const PostList = ({ posts, title, remove }) => {
+const PostList = ({ posts, remove }) => {
 
     if (!posts.length) {
         return (
