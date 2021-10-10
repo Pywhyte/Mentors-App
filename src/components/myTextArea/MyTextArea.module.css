@@ -1,0 +1,8 @@
+.txt__area{
+    margin:  5px 15px;
+    min-width: 350px;
+    min-height: 100px;
+    max-width: 350px;
+    max-height: 100px;
+    background: linear-gradient(252.71deg, #38FCF3 0%, #35C9F2 99.62%);;
+}

@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+}
+
+
+
+.sidebar {
+    height: 100%;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.sidebar>div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.sidebar h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: -30px;
+}
+
+.main-slide {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 65%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.main-slide>div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+}
+
+.bkgCol {
+    background: linear-gradient(252.71deg, #1b3349 0%, #35C9F2 99.62%);
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.bkgImg {
+    background-image: url('https://www.gbta.org/blog/wp-content/uploads/2017/04/Mentor-Word-Cloud.jpg')
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    height: 200px;
+    box-shadow: inset 0 0 20px 10px rgba(0, 0, 0, 0.124);
+}
+
+.con__link {
+    position: relative;
+    display: flex;
+
+
+    height: 500px;
+    width: 500px;
+
+
+}
+.bkgForm{
+    
+ background: linear-gradient(252.71deg, #1b3349 0%, #35C9F2 99.62%);;
+}
