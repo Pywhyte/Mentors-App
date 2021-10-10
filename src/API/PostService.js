@@ -4,7 +4,7 @@ import axios from "axios"
 export default class PostService {
     static async getAll(limit = 10, page = 1) {
 
-        const response = await axios.get("http://0.0.0.0/mentor/",{
+        const response = await axios.get("http://0.0.0.0/mentor/?format=json",{
             params:{
                 _limit:limit,
                 _page:page
