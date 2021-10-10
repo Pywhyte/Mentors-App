@@ -95,3 +95,26 @@ margin: 5px;
 .name{
     top: 140px;
 }
+.links{
+position: absolute;
+right: 50px;
+top: 15px;
+}
+.click {
+    cursor: pointer;
+    padding: 5px;
+    background: none;
+    color: rgb(255, 251, 251);
+    font-size: 25px;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+    margin: 10px;
+   font-size: 36px;
+    
+}
+
+.click:hover{
+    color: rgb(34, 225, 215);
+}

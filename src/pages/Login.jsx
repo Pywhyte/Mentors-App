@@ -4,12 +4,10 @@ import FormEnter from '../components/formEnter/FormEnter';
 import FormRgs from '../components/formEnter/formRgs';
 import FormRgsStud from '../components/formEnter/FormRgsStud';
 import "./Login.css"
-import { useContext } from 'react';
-import { authContext } from '../context/context';
+
 
 const Login = () => {
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
+
     const [rgs, setRgst] = useState(false)
     const [rgss, setRgss] = useState(false)
     const [enter, setEnter] = useState(true)
@@ -29,7 +27,6 @@ const Login = () => {
         setRgst(false)
     }
 
-    
     return (
         <>
             <div className="container">
@@ -45,11 +42,7 @@ const Login = () => {
                         </div>
                         <FormEnter visible={enter} />
                         <FormRgsStud visible={rgss} />
-                        <form >
-
-                            <FormRgs  visible={rgs} />
-                        </form>
-
+                        <FormRgs visible={rgs} />
                     </div>
                 </div>
                 <div class="main-slide">

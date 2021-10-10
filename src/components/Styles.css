@@ -1,0 +1,98 @@
+.App {
+    height: 100vh;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(252.71deg, #1b3349 0%, #35C9F2 99.62%);
+}
+
+.user {
+    position: relative;
+    background: linear-gradient(106.82deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.12) 99.52%);
+    backdrop-filter: blur(20px);
+    /* Note: backdrop-filter has minimal browser support */
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+
+    border-radius: 55px;
+    width: 344px;
+    height: 152px;
+    border-radius: 20px;
+    border: cornsilk solid 2px;
+
+    margin: 0 0 5px 15px;
+}
+
+.user__navbar {
+    background: linear-gradient(106.82deg, rgba(255, 255, 255, 0.063) 0%, rgba(255, 255, 255, 0.083) 99.52%);
+    backdrop-filter: blur(20px);
+    /* Note: backdrop-filter has minimal browser support */
+    position: absolute;
+    border-radius: 18px 0px 0px 20px;
+    height: 150px;
+    width: 100px;
+
+}
+
+.item__list {
+    position: relative;
+    top: 5%;
+    left: 15%;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 0 0 5px 15px;
+}
+
+.user__content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin: 5px;
+    left: 100px;
+}
+
+.user__btns {
+    position: relative;
+    left: 220px;
+    top: 105px;
+}
+
+.item__1 {
+    margin: 1px;
+}
+
+.user__avatar {
+    position: relative;
+    top: 20px;
+    left: 5px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px 1px rgb(0, 0, 0);
+    
+}
+
+.mentors__ {
+    position: relative;
+    top: 150px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+}
+.filter{
+    position: absolute;
+    top: 100px;
+    left: 1600px;
+    display: flex;
+    flex-direction: row;
+    
+}
+.search__{
+    position: relative;
+    top: 12px;
+    font-size: 24px;
+    text-align: center;
+}

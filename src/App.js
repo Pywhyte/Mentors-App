@@ -1,56 +1,51 @@
-import React, { useEffect, useState } from "react"
-import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect, useState } from "react";
+
 import {
-  BrowserRouter as Router,
+  BrowserRouter ,
   Switch,
   Route,
   Link,
-  useRouteMatch,
-  useParams,
-  BrowserRouter
-} from "react-router-dom";
-import "./index.css"
+} from 'react-router-dom';
 import Login from "./pages/Login";
 import MyProfile from "./pages/MyProfile";
-import { auth } from "./action/user";
+import Users from "./pages/Users";
 
-function App(props) {
+const App = ()=> {
 
-  const isAuth = useSelector(state=>state.user.isAuth)
-  const dispatch = useDispatch()
+  // const [isAuth, setIsAuth] = useState(false)
 
-  useEffect(()=>{
-    dispatch(auth())
-  },[])
+
+  // useEffect(() => {
+  //   if (localStorage.getItem("auth")) {
+  //     setIsAuth(true)
+  //   }
+  // }, [])
 
   return (
-    <BrowserRouter>
-
-
-    
-
-    {!isAuth ?
-    <Switch>
-    <Route path="/" component={Login}/>
-    </Switch>
-      :
-      <Switch>
-      <Route path="myprofile" component={MyProfile}/>
+    // <authContext.Provider value={{
+    //   isAuth,
+    //   setIsAuth,
+    // }}>
+    //   <BrowserRouter>
+    //     <AppRouter />
+    //   </BrowserRouter>
+    //  </authContext.Provider>
+<BrowserRouter>
+<Switch>
+        <Route path="/mentors">
+          <Users/>
+        </Route>
+        <Route path="/myprofile">
+          <MyProfile />
+        </Route>
+        <Route path="/">
+          <Login />
+        </Route>
       </Switch>
-  }
-    {/* <Route path="/myProfile">
-    <MyProfile/>
-    </Route>
-    <Route path="/">
-    <Login/>
-    </Route>
-  </Switch>
-</Router>  */}
-
-
-
-    </BrowserRouter>
+</BrowserRouter>
+    
   
+
   )
 }
 
