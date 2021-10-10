@@ -1,0 +1,17 @@
+.profile-card {
+  color: white;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 103, 132, 0.9) 10%,
+    rgba(0, 103, 132, 0.7)
+  );
+  border-radius: 30px;
+  width: 284px;
+  height: 200px;
+  padding: 15px 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: left;
+}

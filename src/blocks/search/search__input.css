@@ -1,0 +1,17 @@
+.search__input {
+  padding: 0;
+  height: 41px;
+  width: 350px;
+  border: 1px solid #006784;
+  border-radius: 20px;
+  color: #006784;
+  background-color: transparent;
+  outline: none;
+  position: relative;
+  padding-left: 18px;
+  transition: 0.3s linear;
+}
+
+.search__input:focus {
+  width: 800px;
+}

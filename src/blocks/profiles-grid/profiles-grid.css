@@ -1,0 +1,7 @@
+.profiles-grid {
+  max-width: 1072px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(344px, 1fr));
+  gap: 20px;
+}
