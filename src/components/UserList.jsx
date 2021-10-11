@@ -4,8 +4,8 @@ import "./Styles.css"
 
 
 
-const PostList = ({ posts, remove }) => {
-
+const PostList = ({ posts }) => {
+   
     if (!posts.length) {
         return (
             <h1 className="mentors__">Упс! никого нет... Может вы будете первым?</h1>
@@ -14,7 +14,7 @@ const PostList = ({ posts, remove }) => {
     return (
         <div className="item__list">
             {posts.map((post, index) =>
-                <UserItem remove={remove}
+                <UserItem 
                     number={index + 1}
                     post={post}
                 />

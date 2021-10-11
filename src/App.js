@@ -9,13 +9,13 @@ import Login from "./pages/Login";
 import MyProfile from "./pages/MyProfile";
 import Users from "./pages/Users";
 
-const App = () => {
+const App = (props) => {
 
   return (
     <BrowserRouter>
       <Switch>
         <Route path="/mentors">
-          <Users />
+          <Users  />
         </Route>
         <Route path="/myprofile">
           <MyProfile />
